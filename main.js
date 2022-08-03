@@ -1,5 +1,5 @@
 var date = new Date();
-var endDate = new Date(date.getTime() + 777343*1000);
+var endDate = new Date(date.getTime() + 777341*1000);
 
 var x = setInterval(function() {
     var now = new Date().getTime();
