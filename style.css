@@ -44,7 +44,7 @@ body {
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    background: url("../images/bg-stars.svg") top/100% 80% no-repeat, url("../images/pattern-hills.svg") bottom/100% 20% no-repeat, var(--darkBlue);
+    background: url("images/bg-stars.svg") top/100% 80% no-repeat, url("images/pattern-hills.svg") bottom/100% 20% no-repeat, var(--darkBlue);
     overflow: hidden;
 }
 /* ================== MAIN ================== */
