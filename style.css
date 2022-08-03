@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+    text-transform: uppercase;
+}
+
+:root {
+    --primaryBlue: hsl(237, 18%, 59%);
+    --primaryRed: hsl(345, 93%, 63%);
+    --desaturedBlue: hsl(236, 21%, 26%);
+    --darkBlue: rgba(32,30,41,255);
+    --darkBlackBluish: hsl(234, 17%, 12%);
+    --white: #fff;
+}
+
+h1 {
+    margin: 170px 0 30px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.7rem;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--primaryBlue);
+    letter-spacing: 0.4rem;
+}
+
+span {
+    font-size: 96px;
+    color: var(--primaryRed);
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/bg-stars.svg") top/100% 80% no-repeat, url("../images/pattern-hills.svg") bottom/100% 20% no-repeat, var(--darkBlue);
+    overflow: hidden;
+}
+/* ================== MAIN ================== */
+
+main {
+    width: 55rem;
+    text-align: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: column;
+}
+
+.countdown span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 192px;
+    min-height: 192px;
+    background-color: var(--desaturedBlue);
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.countdown .card-top {
+    position: absolute;
+    height: 96px;
+    width: 192px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    z-index: 997;
+}
+
+.countdown span::before{
+    position:absolute;
+    content:'';
+    top:50%;
+    transform: translate(0, -50%);
+    left:-12px; 
+    border-radius:50%;
+    width: 24px; 
+    height: 24px;
+    background-color: var(--darkBlue);
+    z-index: 998;
+}
+
+.countdown span:after{
+    position:absolute;
+    content:'';
+    width: 24px; 
+    height: 24px;
+    top:50%;
+    left: 180px; 
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    background-color: var(--darkBlue);
+    z-index: 999;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+footer {
+    height: 30%;
+    width: 20%;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50% 0;
+}
+
+.socials a:hover {
+    cursor: pointer;
+    filter: invert(42%) sepia(36%) saturate(3869%) hue-rotate(319deg) brightness(99%) contrast(96%);;
+    transform: scale(1.2);
+    transition: transform 150ms ease-in-out;
+}
+
+.finished {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
